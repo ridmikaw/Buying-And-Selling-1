@@ -57,6 +57,8 @@ import PaymentList from './component/Payment Management/PaymentList';
 import CreatePayment from './component/Payment Management/CreatePayment';
 import EditPayment from './component/Payment Management/EditPayment';
 import PaymentDetails from './component/Payment Management/PaymentDetails';
+import Income from './component/Payment Management/Income';
+
 
 
 import DiscountList from './component/Discount Management/DiscountList';
@@ -82,6 +84,7 @@ import EditInventoryOrders from './component/Product Management/EditInventoryOrd
 import complainList from './component/Complain Management/complainList'
 import RequestSupplier from './component/Supplier/RequestSupplier';
 import EditRequestSupplier from './component/Supplier/EditRequestSupplier';
+import HighestSelling from './component/Product Management/HighestSelling';
 
 
 
@@ -156,9 +159,11 @@ export default class App extends Component {
 
           {/* Samadhi Jayasundara (Transaction History) */}
         <Route path="/history" exact component={HistoryList}></Route>
-        <Route path="/add/history" component={CreateHistory}></Route>
-        <Route path="/edithistory/:id" component={EditHistory}></Route>
-        <Route path="/history/:id" component={HistoryDetails}></Route>
+        <Route path="/add/history" exact component={CreateHistory}></Route>
+        <Route path="/edithistory/:id" exact component={EditHistory}></Route>
+        <Route path="/summary" exact component={HighestSelling}></Route>
+        <Route path="/history/:id"  component={HistoryDetails}></Route>
+       
 
           {/* Haritha Lidapitiya (####) */}
         <Route path="/discount" exact component={DiscountList}></Route>
@@ -175,6 +180,8 @@ export default class App extends Component {
         <Route path="/payment/:id" component={PaymentDetails}></Route>
         <Route path="/user/payment" exact component={UserPayment}></Route>
         <Route path="/user/payment/form" exact component={PaymentForm}></Route>
+        <Route path="/income/payment" component={Income}></Route>
+      
 
         {/* Ridmi Ranashinha (Delivery Management) */}
         <Route path="/delivery" exact component={DeliveryList}></Route>
