@@ -111,7 +111,7 @@ setName(e.target.value);
 <div className="mb-3">
 <label for="exampleInputPassword1" className="form-label"id='delivery'>Contact Number</label>
 <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Enter Contact Number"
-pattern="^\d{10}$"
+pattern="^\d{10}$"  title="Please enter a 10-digit number"  
 value={number}
 onChange={(e) =>{
 
