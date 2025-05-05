@@ -102,6 +102,7 @@ export default function Signup() {
                             name="password"
                             value={data.password}
                             onChange={handleChange}
+
                           />
                         </div>
                         <div className="mb-3">
@@ -142,3 +143,7 @@ export default function Signup() {
     </div>
   );
 }
+
+
+
+
